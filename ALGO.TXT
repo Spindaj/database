@@ -73,7 +73,7 @@ VALUES ('FLA', 'Flamengo', 'RJ'),
 ('CRU', 'Cruzeiro', 'MG'),
 ('CSA', 'CSA', 'AL'),
 ('CHA', 'Chapecoence', 'SC'),
-('AVA', 'Avai', 'SC'),
+('AVA', 'Avai', 'SC')
 
 INSERT INTO tbresultado (SIGLA, VITORIAS, EMPATES, DERROTAS)
 VALUES ('FLA', '28', '6', '4'),
