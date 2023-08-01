@@ -1,0 +1,98 @@
+create database CAMP_BRAS_SPINDA;
+
+use CAMP_BRAS_SPINDA;
+
+create table tbuf
+	(
+		uf varchar(2) primary key,
+		nomeuf varchar(25),
+	)
+
+create table tbequipe
+	(
+		sigla varchar(3) primary key,
+		nomr_equipe varchar(25),
+		uf varchar(2),
+	)
+
+create table tbresultado
+	(
+		sigla varchar(3) primary key,
+		vitorias int,
+		empates int,
+		derrotas int,
+	)
+
+INSERT INTO TBUF (UF, NOMEUF) 
+VALUES 
+('AC', 'Acre'), 
+('AL','Alagoas'), 
+('AP', 'Amapá'), 
+('AM', 'Amazonas'), 
+('BA', 'Bahia'),
+('CE', 'Ceará'), 
+('DF', 'Distrito Federal'), 
+('ES', 'Espírito Santo'),
+('GO', 'Goiás'),
+('MA', 'Maranhão'), 
+('MT', 'Mato Grosso'),
+('MS', 'Mato Grosso do Sul'), 
+('MG', 'Minas Gerais'),
+('PA', 'Pará'), 
+('PB', 'Paraíba'), 
+('PR', 'Paraná'), 
+('PE', 'Pernambuco'), 
+('PI', 'Piauí'),
+('RJ', 'Rio de Janeiro'), 
+('RN', 'Rio Grande do Norte'), 
+('RS', 'Rio Grande do Sul'),
+('RO','Rondonia'), 
+('RR', 'Roraima'), 
+('SC', 'Santa Catarina'), 
+('SP', 'São Paulo'),
+('SE', 'Sergipe'), 
+('TO', 'Tocantins')
+
+INSERT INTO tbEQUIPE (SIGLA, NOMR_EQUIPE, UF)
+VALUES ('FLA', 'Flamengo', 'RJ'),
+('SAN', 'Santos', 'SP'),
+('PAL', 'Palmeiras', 'SP'),
+('GRE', 'Grêmio', 'RS'),
+('ATH', 'Athletico-PR', 'PR'),
+('SAO', 'São Paulo', 'SP'),
+('INT', 'Internacional', 'RS'),
+('COR', 'Corinthians', 'SP'),
+('FOR', 'Fortaleza', 'CE'),
+('GOI', 'Goiás', 'GO'),
+('BAH', 'Bahia', 'BA'),
+('VAS', 'Vasco', 'RJ'),
+('CAM', 'Atletico-MG', 'MG'),
+('FLU', 'Fluminence', 'RJ'),
+('BOT', 'Botafogo', 'RJ'),
+('CEA', 'Ceará', 'CE'),
+('CRU', 'Cruzeiro', 'MG'),
+('CSA', 'CSA', 'AL'),
+('CHA', 'Chapecoence', 'SC'),
+('AVA', 'Avai', 'SC'),
+
+INSERT INTO tbresultado (SIGLA, VITORIAS, EMPATES, DERROTAS)
+VALUES ('FLA', '28', '6', '4'),
+('SAN', '22', '8', '8'),
+('PAL', '21', '1', '6'),
+('GRE', '19', '8', '11'),
+('ATH', '18', '10', '10'),
+('SAO', '17', '12', '9'),
+('INT', '16', '9', '13'),
+('COR', '14', '14', '10'),
+('FOR', '15', '8', '15'),
+('GOI', '15', '7', '16'),
+('BAH', '12', '13', '13'),
+('VAS', '12', '13', '13'),
+('CAM', '13', '9', '16'),
+('FLU', '12', '10', '16'),
+('BOT', '13', '4', '21'),
+('CEA', '10', '9', '19'),
+('CRU', '7', '15', '26'),
+('CSA', '8', '8', '22'),
+('CHA', '7', '21', '20'),
+('AVA', '3', '11', '24')
